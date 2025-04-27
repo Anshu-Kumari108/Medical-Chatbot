@@ -1,9 +1,22 @@
+:root{
+	--primary-color: #4583b254; 
+    --primary-dark: #4FB4E8;
+    --primary-light: #B6E0FE;
+    --text-color: #333;
+    --light-text: #666;
+    --background: #f5f9fc;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 body,html{
 	height: 100%;
 	margin: 0;
+
+    color: var(--text-color);
+    line-height: 1.6;
 	background: rgb(44, 47, 59);
-   background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
-	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+    background: -webkit-linear-gradient(to right, rgb(168, 212, 226), rgb(106, 181, 211), rgb(94, 150, 218));
+	background: linear-gradient(to right, rgba(89, 154, 219, 0.482), rgb(159, 159, 160), rgb(75, 117, 195));
 }
 
 .chat{
@@ -13,7 +26,7 @@ body,html{
 .card{
 	height: 500px;
 	border-radius: 15px !important;
-	background-color: rgba(0,0,0,0.4) !important;
+	background-color: var(--primary-color) !important;
 }
 .contacts_body{
 	padding:  0.75rem 0 !important;
@@ -24,11 +37,12 @@ body,html{
 	overflow-y: auto;
 }
 .card-header{
+	background-color: rgba(20, 79, 125, 0.87);
 	border-radius: 15px 15px 0 0 !important;
 	border-bottom: 0 !important;
 }
 .card-footer{
-border-radius: 0 0 15px 15px !important;
+    border-radius: 0 0 15px 15px !important;
 	border-top: 0 !important;
 }
 .container{
@@ -36,7 +50,7 @@ border-radius: 0 0 15px 15px !important;
 }
 .search{
 	border-radius: 15px 0 0 15px !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: rgba(68, 66, 66, 0.3) !important;
 	border:0 !important;
 	color:white !important;
 }
@@ -45,15 +59,15 @@ border-radius: 0 0 15px 15px !important;
    outline:0px !important;
 }
 .type_msg{
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: var(--background) !important;
 	border:0 !important;
-	color:white !important;
+	color:rgb(50, 48, 48) !important;
 	height: 60px !important;
 	overflow-y: auto;
 }
-	.type_msg:focus{
+.type_msg:focus{
 	 box-shadow:none !important;
-   outline:0px !important;
+     outline:0px !important;
 }
 .attach_btn{
 	border-radius: 15px 0 0 15px !important;
@@ -64,7 +78,7 @@ border-radius: 0 0 15px 15px !important;
 }
 .send_btn{
 	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: rgb(20, 79, 125, 0.87) !important;
 	border:0 !important;
 	color: white !important;
 	cursor: pointer;
@@ -73,7 +87,7 @@ border-radius: 0 0 15px 15px !important;
 	border-radius: 0 15px 15px 0 !important;
 	background-color: rgba(0,0,0,0.3) !important;
 	border:0 !important;
-	color: white !important;
+	color: rgb(77, 75, 75) !important;
 	cursor: pointer;
 }
 .contacts{
@@ -96,7 +110,7 @@ border-radius: 0 0 15px 15px !important;
 }
 .user_img_msg{
 	height: 40px;
-	width: 40px;
+	width: 42px;
 	border:1.5px solid #f5f6fa;
 
 }
@@ -107,7 +121,7 @@ border-radius: 0 0 15px 15px !important;
 }
 .img_cont_msg{
 	height: 40px;
-	width: 40px;
+	width: 35px;
 }
 .online_icon{
 	position: absolute;
@@ -150,7 +164,7 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: auto;
 	margin-left: 10px;
 	border-radius: 25px;
-	background-color: rgb(82, 172, 255);
+	background-color: #f5f9fc;
 	padding: 10px;
 	position: relative;
 }
@@ -159,8 +173,8 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: auto;
 	margin-right: 10px;
 	border-radius: 25px;
-	background-color: #58cc71;
-	padding: 10px;
+	background-color: var(--background);
+	padding: 5px 10px;
 	position: relative;
 }
 .msg_time{
