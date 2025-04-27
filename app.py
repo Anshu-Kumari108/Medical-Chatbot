@@ -1,7 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from src.helper import download_hugging_face_embeddings
 from langchain_pinecone import PineconeVectorStore
-# from langchain_openai import OpenAI
 from langchain_groq import ChatGroq
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -58,12 +57,16 @@ def index():
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():
-    msg = request.form["msg"]
-    input = msg
-    print(input)
-    response = rag_chain.invoke({"input": msg})
-    print("Response : ", response["answer"])
-    return str(response["answer"])
+    try:
+        msg = request.form["msg"]
+        input = msg
+        print(input)
+        response = rag_chain.invoke({"input": msg})
+        print("Response : ", response["answer"])
+        return str(response["answer"])
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"error": "Sorry, there was an error processing your request."})
 
 
 
