@@ -1,6 +1,7 @@
+flask
+gunicorn
 sentence-transformers==2.6.0
 langchain
-flask
 pypdf
 python-dotenv
 pinecone[grpc]
