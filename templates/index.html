@@ -156,8 +156,9 @@
         $(document).ready(function() {
             $("#messageArea").on("submit", function(event) {
                 const date = new Date();
-                const hour = date.getHours();
-                const minute = date.getMinutes();
+                const hour = date.getHours().toString().padStart(2, '0');
+                const minute = date.getMinutes().toString().padStart(2, '0');
+
                 const str_time = hour + ":" + minute;
                 var rawText = $("#text").val();
 
